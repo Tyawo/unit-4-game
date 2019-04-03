@@ -3,14 +3,15 @@ var losses = 0;
 var wins = 0;
 var firstNumber = 0;
 
+
 var resetandRestart = function() {
 
     $(".crystals").empty();
-    var image = [
-        'http://www.lightworkersworld.com/wp-content/uploads/2015/08/Crystal-Quartz.jpg' , 
-        'https://cdn1.iconfinder.com/data/icons/crystal-1/60/red_crystal-512.png' , 
-        'http://aux3.iconspalace.com/uploads/5123983611224387580.png' , 
-        'https://cdn1.iconfinder.com/data/icons/crystal-1/60/green_crystal_copy-512.png'];
+     var image = [
+         'http://www.lightworkersworld.com/wp-content/uploads/2015/08/Crystal-Quartz.jpg' , 
+         'https://cdn1.iconfinder.com/data/icons/crystal-1/60/red_crystal-512.png' , 
+         'http://aux3.iconspalace.com/uploads/5123983611224387580.png' , 
+         'https://cdn1.iconfinder.com/data/icons/crystal-1/60/green_crystal_copy-512.png'];
 
  randomResult = Math.floor(Math.random() * 102) + 19;
 
@@ -25,6 +26,10 @@ var resetandRestart = function() {
      var crystal = $("<div>");
         crystal.attr({"class": 'crystal', "data-value": random
         });
+        crystal.css({
+            "background":"url('" + image[i] + "')",
+            "background-size":"cover",
+        })
         
        $(".crystals").append(crystal);   
      }
@@ -46,7 +51,9 @@ $(document).on('click', ".crystal", function() {
     console.log(firstNumber);
 
     if(firstNumber> randomResult){
+
         losses++;
+        
         $("#losses").html("Losses: " + losses);
 
         firstNumber = 0;
@@ -54,8 +61,11 @@ $(document).on('click', ".crystal", function() {
         resetandRestart();
     }
     else if(firstNumber === randomResult){
+
         wins++;
+
         $("#wins").html("Wins:" + wins);
+
         firstNumber = 0;
 
         resetandRestart();
