@@ -47,7 +47,7 @@ $(document).on('click', ".crystal", function() {
 
     if(firstNumber> randomResult){
         losses++;
-        $("#losses").html(losses);
+        $("#losses").html("Losses: " + losses);
 
         firstNumber = 0;
 
@@ -55,7 +55,7 @@ $(document).on('click', ".crystal", function() {
     }
     else if(firstNumber === randomResult){
         wins++;
-        $("#wins").html(wins);
+        $("#wins").html("Wins:" + wins);
         firstNumber = 0;
 
         resetandRestart();
