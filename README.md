@@ -8,7 +8,7 @@ This is one the many other games you played or will eventually. What's new about
     DON'T CHEAT, PLAY FAIRLY AND LET THE MAGIC HAPPEN!
 
 Once you open the game the computer choses a number displayed to you.
-You the player have 4 crystals with 4 different random number hiden to you. Once you click on a specific crystal, its number is revealed to you.
+You the player have 4 crystals with 4 different random numbers hiden to you. Once you click on a specific crystal, its number is revealed to you.
 
 Each time you click on a crystal its number is added to your total score. Win the game by matching your total score to the computer's number. If you succeed you total wins increment by one. If you are unable to match the computer's number, you lose and your total loss increment by one as well. 
 
